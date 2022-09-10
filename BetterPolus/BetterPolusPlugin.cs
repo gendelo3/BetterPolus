@@ -1,14 +1,16 @@
 ﻿using BepInEx;
-using BepInEx.IL2CPP;
+using BepInEx.Unity.IL2CPP;
 using BepInEx.Logging;
 using HarmonyLib;
 using System;
 using UnityEngine.SceneManagement;
+using Reactor;
 
 namespace BetterPolus
 {
     [BepInPlugin(Id, Name, Version)]
     [BepInProcess("Among Us.exe")]
+    [ReactorModFlags(ModFlags.RequireOnAllClients)]
     public class BetterPolusPlugin : BasePlugin
     {
         public const string Id = "ch.brybry.betterpolus";
